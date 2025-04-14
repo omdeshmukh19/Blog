@@ -7,13 +7,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-  })
+  });
 
   return {
     dir: {
       input: "src",
       output: "_site"
-    }
+    },
+    templateFormats: ["njk", "html", "md"]
   };
-  templateFormats: ["njk", "html", "md"]
 };
